@@ -7,7 +7,7 @@ pipeline {
        stage ('GIT') {
                steps{
                  script{
-                     checkout([$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: [[ credentialsId: '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',url :'https://github.com/hanenemho/cd_app']]])                
+                     checkout([$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: [[ credentialsId: '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',url :'https://github.com/hanenemho/cd_app']]])                
                  }
 
 }
