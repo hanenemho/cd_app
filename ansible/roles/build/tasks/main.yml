@@ -1,5 +1,5 @@
 ---
 - name : build app
-                   shell :
-                      chdir: "{{playbook_dir}}/.."
-                      cmd : ng build --prod
+  shell :
+  chdir: "{{playbook_dir}}/.."
+  cmd : ng build --prod
