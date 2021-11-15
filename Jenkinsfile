@@ -4,13 +4,14 @@ pipeline {
 
 
     stages {
-       stage ('GIT') {
-               steps{
-                 script{
-                     checkout([$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs: [[ credentialsId: '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',url :'https://github.com/hanenemho/cd_app']]])                
-                 }
-
-}
+       stage('Pull') {
+             steps{
+                script{
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                        userRemoteConfigs: [[
+                            url: 'https://github.com/hanenemho/cd_app']]])
+                }
+            }
         }
         stage ('Build') {
                steps{
